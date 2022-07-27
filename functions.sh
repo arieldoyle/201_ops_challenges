@@ -5,9 +5,13 @@
 # Date of latest revision: 27JUL2022      
 # Purpose: Print a string to the terminal
 
+# Defines variable result
+result="The user session history for this PC is:"
+
 # Defines function sessionHistory
 function sessionHistory {
-	echo "$(sudo last -f /var/log/wtmp)"
+	echo $result
+	echo "$(sudo last)"
 }
 
 # This function calls sessionHistory
