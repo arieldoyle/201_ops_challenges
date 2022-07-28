@@ -11,7 +11,7 @@ result="The user session history for this PC is:"
 # Defines function sessionHistory
 function sessionHistory {
 	echo $result
-	echo "$(sudo last)"
+	sudo last
 }
 
 # This function calls sessionHistory
