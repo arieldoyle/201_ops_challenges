@@ -3,7 +3,7 @@
 # Script: Ops 201 Class 04 Ops Challenge Solution
 # Author: Ariel D.                  
 # Date of latest revision: 28JUL2022      
-# Purpose: Function that uses an array to push dirctories and text files
+# Purpose: Function that uses an array to push directories and text files
 
 # Main
 # Defines array
