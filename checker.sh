@@ -8,12 +8,12 @@
 # Main
 
 #Defines arrays to be called on
-DIRECTORY=("dir1" "dir2" "dir3" "dir4")
-FILE=("file1.txt" "file2.txt" "file3.txt" "file4.txt")
+ARRAY=( $( ls .) )
 
 #Prints out current list in arrays
-echo "The current list of directories: ${DIRECTORY[@]}"
-echo "The current list of files: ${FILE[@]}"
+echo "The current list of directories/files: "
+echo "              ${ARRAY[@]}"
+echo ""
 
 #Prompts user if they are looking for a directory or a file and stores it
 echo "Please input d to search for a directory or f to search for a file: "
@@ -24,9 +24,9 @@ read input1
 while [[ $input1 = d ]]
 do
     read -p "Please enter a directory  name: " input2
-        if [[ " ${DIRECTORY[*]} " =~ $input2 ]]
+        if [[ " ${ARRAY[*]} " =~ $input2 ]]
             then   
-                echo "$input2 exists. Goodbye"
+                echo "$input2 exists. Goodbye."
                 exit
             else [ -d $input2 ]
                 echo "$input2 does not exist. A new directory is being created."
@@ -34,21 +34,20 @@ do
                 echo "Your directory has been created. Goodbye."
                 exit
         fi
-done   
+done  
 
 while [[ $input1 = f ]]
 do 
-    read -p "Please enter a file name: " input3
-        if [[ " ${FILE[*]} " =~ $input3 ]]
+    read -p "Please enter a file name (do not include extension - .txt default): " input3
+        if [[ " ${ARRAY[*]} " =~ $input3 ]]
             then
-                echo "$input3 exists. Goodbye"
+                echo "$input3 exists. Goodbye."
                 exit
             else [[ -f $input3 ]]
-                echo "$input3 does not exist. A new file is being created. Goodbye"
-                touch $input3
+                echo "$input3 does not exist. A new file is being created. Goodbye."
+                touch $input3.txt
                 exit
         fi
 done
-
         
 # End
