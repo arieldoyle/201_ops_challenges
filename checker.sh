@@ -7,8 +7,8 @@
 
 # Main
 
-#Defines arrays to be called on
-ARRAY=( $( ls .) )
+#Defines array to show list of current directory the user is working in
+ARRAY=( $( ls . ) )
 
 #Prints out current list in arrays
 echo "The current list of directories/files: "
