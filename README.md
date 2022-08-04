@@ -6,3 +6,5 @@
 - [Class 05 OPS Challenge](loopkill.sh)
 - [Class 06 OPS Challenge](checker.sh)
 - [Class 07 OPS Challenge](sysinfo.sh)
+- [Class 08 OPS Challenge](autocopy.txt)
+- [Class 09 OPS Challenge](logretrieval.ps1)
