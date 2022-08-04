@@ -17,15 +17,13 @@ echo "***!WARNING: YOU SHOULD RUN THIS SCRIPT AS SUPER-USER (sudo bash sysinfo.s
 read -p "Do you wish to continue?? (y/n): " input
 echo ""
 
-while [ $input == n ]
-do
+if [ $input == n ]
+then
     echo "Exiting the script. Please enter the script as *sudo bash sysinfo.sh* to try again."
     echo ""
-done
+    exit
 
-while [[ $input == y ]]
-do 
-
+else [[ $input == y ]]
     #Displays Computer Name
     echo "Computer Name:" 
     lshw | grep -E '' | head -n1
@@ -58,7 +56,6 @@ do
 
     echo "This is the end of the system information specs. Thank you for stopping by. Goodbye! "
     exit
-
-done
+fi
 
 # End
