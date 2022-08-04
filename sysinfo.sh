@@ -5,8 +5,8 @@
 # Date of latest revision: 02AUG2022      
 # Purpose: Runs a script that shows only the requested system information/specs
 # Resources:
-#       https://www.thegeekstuff.com/2008/12/how-to-get-hardware-specs-of-your-system-using-lshw-hardware-lister/
-#       https://unix.stackexchange.com/questions/363004/how-to-grep-two-lines-from-lshw
+    # https://www.thegeekstuff.com/2008/12/how-to-get-hardware-specs-of-your-system-using-lshw-hardware-lister/
+    # https://unix.stackexchange.com/questions/363004/how-to-grep-two-lines-from-lshw
 
 # Main
 #Prompts user with warning to ensure they are using the sudo to see system specs
@@ -38,7 +38,7 @@ else [[ $input == y ]]
     #Displays RAM specs: 
     #Description, Physical ID, Size
     echo "RAM Specs:"
-    lshw -c memory | grep 'system memory\|description\|physical\|size'
+    lshw -c memory | grep -A 3 '*-memory'
     echo ""
 
     #Displays Display Adapter specs: 
