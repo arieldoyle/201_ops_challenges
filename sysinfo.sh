@@ -21,7 +21,6 @@ if [ $input == n ]
 then
     echo "Exiting the script. Please enter the script as *sudo bash sysinfo.sh* to try again."
     echo ""
-    exit
 
 else [[ $input == y ]]
     #Displays Computer Name
