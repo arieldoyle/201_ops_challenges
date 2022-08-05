@@ -26,7 +26,6 @@ else [[ $input == y ]]
     #Displays Computer Name
     echo "Computer Name:" 
     lshw | grep -E '' | head -n1
-    #hostnamectl | grep 'hostname'
     echo ""
 
     #Displays CPU specs: 
