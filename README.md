@@ -9,3 +9,4 @@
 - [Class 08 OPS Challenge](autocopy.txt)
 - [Class 09 OPS Challenge](logretrieval.ps1)
 - [Class 10 OPS Challenge](sysproccmd.ps1)
+- [Class 11 OPS Challenge](win10autoconfig.ps1)
