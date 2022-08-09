@@ -7,16 +7,22 @@
 
 # Main
 
-# To go to desktop
-cd ~/Desktop
+# Function:
+    # To go to desktop
+    # Generate ipconfig report in a text file
+    # Selects only the IPv4 Address 
+    # Removes the text file from the desktop
+function Report {
+    cd ~/Desktop
+    $Generate_Network_Report = ipconfig /all > "network_report.txt"
+    Select-String -Path "network_report.txt" -Pattern "IPv4 Address"
+    Remove-Item -Path "network_report.txt"
+}
 
-# Generate ipconfig report in a text file
-$Generate_Network_Report = ipconfig /all > "network_report.txt"
+# Calls on the function to run
+Report
 
-# Selects only the IPv4 Address 
-Select-String -Path "network_report.txt" -Pattern "IPv4 Address"
-
-# Removes the text file
-Remove-Item -Path "network_report.txt"
+# String that tells user that the IPv4 was printed and that the text file was deleted
+echo "Printed IPv4 Address. Deleted the created text file. Goodbye."
 
 # End
