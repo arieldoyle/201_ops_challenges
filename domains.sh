@@ -17,9 +17,9 @@ function domainAnalyzer {
     dig $input >> domaininfo.txt
     host $input >> domaininfo.txt
     nslookup $input >> domaininfo.txt
-    cat domaininfo.txt
 }
 
+# Runs the function
 domainAnalyzer
 
 # End
